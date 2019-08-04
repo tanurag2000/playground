@@ -1,0 +1,155 @@
+<html>
+<head>
+
+     <!--Import Google Icon Font-->
+     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+     <!--Import materialize.css-->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+
+     <!--Let browser know website is optimized for mobile-->
+     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<style>
+body{
+			background-color:#0a5f7b;
+		}
+.col s12{
+  padding: 20px;
+  margin: 20px;
+
+}
+
+
+</style>
+</head>
+<body class="body">
+      <div class="row">
+                <div class="col s12">
+                  <ul class="tabs">
+                    <li class="tab col s3"><a href="#test1">PPT</a></li>
+                    <li class="tab col s3"><a class="active" href="#test2">ARTICLES</a></li>
+                    <li class="tab col s3"><a href="#test3">VIDEOS</a></li>
+                    <li class="tab col s3"><a href="#test4">EVENTS</a></li>
+                  
+                  </ul>
+                </div>
+                <div id="test1" class="col s12">
+                  <div id="pptup" class="col l12 m12 s6">
+                    <div class="card-panel z-depth-5">
+                      <div class="modal-conent">
+                        <span>
+                          <label>
+                            <h4 class="flow-text">PPT Upload</h4>
+                          </label>
+                        </span>								
+                        <form action="fileppt.php" method="post" enctype="multipart/form-data">
+                        <br>
+                          <div class="input-field">
+                            <input type="text" class="materialize-textarea" name="ppt_title" id="ppt_title" required>
+                            <label for="ppt_title" class="active">Title</label>
+                          </div>
+                          <br>
+                          <div class="input-field">
+                            <input type="text" class="materialize-textarea" name="ppt_dis" id="ppt_dis" required>
+                            <label for="ppt_dis" class="active">PDF Discription</label>
+                          </div>
+                          <br>
+                          <br>
+                          <div class="input-field">
+                            <input type="file" name="fileToUpload" id="fileToUpload">
+                          </div>
+                          <br>
+                          <input type="hidden" name="category" value="no_domain">
+                          <input type="submit" class="btn"  value="Upload PDF" name="submit">
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                  
+                 </div>
+        
+                </div>
+                <div id="test2" class="col s12">
+                    <div id="article" class="col l12 m12 s6">
+                        <div class="card-panel z-depth-5">
+                          <div class="modal-conent">
+                            <span>
+                              <label>
+                                <h4 class="flow-text">Aarticle Upload</h4>
+                              </label>
+                            </span>								
+                            <form action="fileart.php" method="post" enctype="multipart/form-data">
+                              <div class="input-field">
+                                <input type="text" class="materialize-textarea" name="art_title" id="art_title" required>
+                                <label for="art_title" class="active">Title</label>
+                              </div>
+                              <br>
+                              <div class="input-field">
+                                <input type="text" class="materialize-textarea" name="art_dis" id="art_dis" required>
+                                <label for="art_dis" class="active">Write your Article here...</label>
+                              </div>
+                              <input type="hidden" name="category" value="no_domain">
+                              <input type="submit" class="btn"  value="Upload Article" name="submit">
+                            </form>
+                          </div>
+                        </div>
+                      </div>
+              </div>
+         </div>
+                <div id="test3" class="col s12">
+                    <div id="videos" class="col l12 m12 s6">
+                        <div class="card-panel z-depth-5">
+                          <div class="modal-conent">
+                            <span>
+                              <label>
+                                <h4 class="flow-text">Video</h4>
+                              </label>
+                            </span>								
+                            <form action="filevid.php" method="post" enctype="multipart/form-data">
+                              <div class="input-field">
+                                <input type="text" class="materialize-textarea" name="vid_title" id="vid_title" required>
+                                <label for="vid_title" class="active">Video URL</label>
+                              </div>
+                              <br>
+                              <div class="input-field">
+                                <input type="text" class="materialize-textarea" name="vid_dis" id="vid_dis" required>
+                                <label for="vid_dis" class="active">Video Discription</label>
+                              </div>
+                              <input type="hidden" name="category" value="no_domain">
+                              <input type="submit" class="btn"  value="Upload Video" name="submit">
+                            </form>
+                          </div>
+                        </div>
+                      </div>
+                   <div class="col l3 m3 s12"></div>
+                </div>	
+                </div>
+                </div>
+              </div>
+       </div>
+                <div id="test4" class="col s12">
+                  <div id="event" class="col l12 m12 s6">
+                    <div class="card-panel z-depth-5">
+                      <div class="modal-conent">
+                        <span>
+                          <label>
+                            <h4 class="flow-text">Events</h4>
+                          </label>
+                        </span>								
+                        <div class="event">
+                                <form method="POST">
+                                
+                                  <input type="text" name="title" id="" placeholder="Enter Title"><br><br>
+                                  <input type="text" name="description" id="" placeholder="Enter Description"><br><br>
+                                  <input type="text" name="guest" id="" placeholder="Enter Guest"><br><br>
+                                  <input type="text" name="location" id="" placeholder="Enter Location"><br><br>
+                                  <input type="text" name="date" id="" placeholder="Enter Date"><br><br>
+                                  <input type="submit" class="btn"  value="Submit" name="submit">
+                                </form>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+</body>
+</html>
